@@ -158,7 +158,7 @@ class Server(object):
             ##################################################################
             # initialize selection methods by setting given global model
             if self.args.method in NEED_INIT_METHOD:
-                if self.args.method in ["PBFL", "DivFL", "FedCorr", "Cosin"]:
+                if self.args.method in ["GPFL", "DivFL", "FedCorr", "Cosin"]:
                     self.selection_method.init(self.global_model)
                 else:
                     raise NotImplementedError("We do not maintain a cost model for each client, "
